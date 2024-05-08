@@ -65,13 +65,13 @@ b = linear_model.layers[2].get_weights()[1]
 print('W 2', w)
 print('b 2', b)
 
-print('predict city 1 : brasilia')
-#print(linear_model.predict([[-43.598 -28.107],[-46.268 -14.62 ],[-45.154, -3.249], [-46.52,-21.315],[-41.719, -10.532], [-48.291, -28.376], [-37.896, -15.371], [-50.693, -14.077], [-45.473,  -2.488], [-51.73,  -12.565]] ).tolist() )   
-#print(linear_model.predict([[-43.598, -28.107],[-46.268, -14.62]] ).tolist() )   
+print('predict city 1 : tokio')
+print(linear_model.predict([[139.6917, 35.6895]]).tolist())
+#printprint(linear_model.predict([[139.6917, 35.6895]]).tolist())
 
-print('predict city 2 : kazajistan')
-#print(linear_model.predict([[65.036 55.836], [58.542 51.449]] ).tolist() ) 
-#print(linear_model.predict([[-43.598 -28.107],[-46.268 -14.62]] ).tolist() )   
+print('predict city 2 : Nairobi')
+print(linear_model.predict([[36.817223, -1.286389]]).tolist()) 
+#print(linear_model.predict([[36.817223, -1.286389]]).tolist())   
 
-# export_path = 'linear-model/1/'
-# tf.saved_model.save(linear_model, os.path.join('./',export_path))
+export_path = 'linear-model/1/'
+tf.saved_model.save(linear_model, os.path.join('./',export_path))
